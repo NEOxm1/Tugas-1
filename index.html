@@ -1,0 +1,263 @@
+             <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BramBram</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #ff5e57;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: var(--primary);
+            color: var(--secondary);
+            margin-bottom: 3rem;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+		
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: fill;
+            border: 3px solid var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links img {
+            transition: transform 0.3s ease;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .photo-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 4/3;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .photo-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover .photo-info {
+            transform: translateY(0);
+        }
+
+        .photo-card:hover img {
+            filter: brightness(0.7);
+        }
+
+        .photo-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .photo-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary);
+            color: var(--secondary);
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-section">
+            <img src="img/526530879_18067036991167728_3241701948095569447_n.jpg" alt="Profile photo of street photographer" class="profile-img">
+            <h1>BRAMA PANDU SADEWO (NEO)</h1>
+            <p class="subtitle">Capturing raw moments of urban life through the lens</p>
+            <div class="social-links">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="gallery">
+            <div class="photo-card">
+                <img src="img/SaveClip.App_488798545_17858313069400927_5914924114303522011_n.jpg">
+                <div class="photo-info">
+                    <h3 class="photo-title">Cafe Malam</h3>
+                    <p class="photo-description">Suasana Cafe Malam</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="img/SaveClip.App_499184626_17862846732400927_417122514290002979_n.jpg">
+                <div class="photo-info">
+                    <h3 class="photo-title">Sore kala itu</h3>
+                    <p class="photo-description">Foto Di Ambil Sehabis Latihan Pramuka</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="img/SaveClip.App_503084784_17865614934400927_6508943059534263078_n.jpg">
+                <div class="photo-info">
+                    <h3 class="photo-title">Kapal Berjejer</h3>
+                    <p class="photo-description">Rapi Banget.</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="img/SaveClip.App_511572848_17868215637400927_79162074689106613_n.jpg">
+                <div class="photo-info">
+                    <h3 class="photo-title">Seniman Di Balik pintu </h3>
+                    <p class="photo-description">Pak mansyur Lop lop
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="img/SaveClip.App_504447852_17865903246400927_2370718796878581314_n.jpg">
+                <div class="photo-info">
+                    <h3 class="photo-title">Hijau</h3>
+                    <p class="photo-description">idk Keliatan bagus aja</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="img/SaveClip.App_504874849_17865903261400927_5931547276584048226_n.jpg">
+                <div class="photo-info">
+                    <h3 class="photo-title">Kemurunan</h3>
+                    <p class="photo-description">Rame Banget Njir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 NEO. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/neo_pengencepetoktober/">Instagram </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+                    
